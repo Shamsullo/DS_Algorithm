@@ -10,13 +10,23 @@ main(){
 
     int input; cin >> input;
     int calorie = burger[input - 1];
-    input >> cin;
-    calorie += side[input - 1];
-    input >> cin;
-    calorie += drink[input -1];
-    input >> cin;
-    calorie += dessert[input - 1];
+    int input1; cin >> input1;
+    calorie += side[input1 - 1];
+    int input2; cin >> input2;
+    calorie += drink[input2 -1];
+    int input3; cin >> input3;
+    calorie += dessert[input3 - 1];
 
-    cout << calorie << endl; 
+
+    // int input; cin >> input;
+    // int calorie = burger[input - 1];
+    // input >> cin;
+    // calorie += side[input - 1];
+    // input >> cin;
+    // calorie += drink[input -1];
+    // input >> cin;
+    // calorie += dessert[input - 1];
+
+    cout << "Your total Calorie count is " << calorie << "."<< endl; 
 
 }
