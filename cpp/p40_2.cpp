@@ -4,6 +4,19 @@ using namespace std;
 
     //Do not pass me the ball!
 
+int modInverse(int n, int m) {
+
+	for (int x = 1; x < m; x++)
+	{
+		if ((x * n) % m == 1) {
+			return x;
+		}
+		else {
+			return 0;
+		}
+	}
+}
+
 main(){
     int a; cin >> a;
     int b; cin >> b;
@@ -13,14 +26,4 @@ main(){
     return 0;
 }
 
-int modInverse(int n, int m){
-    
-    for(int x = 1; x < m; x++)
-    {
-        if ((x * n) % m == 1){
-            return x;
-        }else{
-            return 0;
-        }
-    }    
-}
+
