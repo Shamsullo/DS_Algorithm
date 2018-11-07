@@ -1,6 +1,5 @@
 #include <iostream>
 #include <math.h>
-#include <iomanip>
 
 using namespace std;
 
@@ -11,11 +10,14 @@ main(){
 	int yYear; cin >> yYear;
 	double pop; cin >> pop;
 	int xYear; cin >> xYear;
-	rate = 1 + rate / 100;
+	rate = rate / 100 + 1;
 
-	while(yYear < xYear){
-		pop *= rate;
+	// double popInX = pop * pow((1 + rate), yYear-xYear);
+	// cout << fixed << popInX << endl;
+
+	while(yYear <= xYear){
+		pop = (pop * rate);
 		++yYear;
 	}
-	cout << fixed << setprecision(0) << round(pop) << endl;
+	cout << fixed << pop << endl;
 }
