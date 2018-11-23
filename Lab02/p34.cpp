@@ -3,7 +3,7 @@
 using namespace std;
 
 	//Dressing up
-
+	
 main(){
 	int n; cin >> n;
 	char table[n][n*2];
@@ -20,13 +20,5 @@ main(){
 		}
 		cout << endl;
 	}
-	
-	int a, b;
-	//a > b;
-	
-	while(a % b !=0){
-		a % b = r;
-		q = a / b;
-	} 
 
 }

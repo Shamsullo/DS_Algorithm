@@ -7,18 +7,16 @@ using namespace std;
 main(){
 	int a; cin >> a;
 	int b; cin >> b;
-	if (a  > 10 and b < 10){
-		a = 10;
-		b = 10 - b;
-		for (int i = b; i < a; ++i)
-		{
-			
+	int counter = 0; 
 
-
-			for (int i = 0; i < count; ++i)
-			{
-				/* code */
+	for (int i = 1; i <= a ; ++i){
+		for (int j = b; j > 0; --j){
+			if(j + i == 10){
+				++counter;
+				break;
 			}
-		}
+		}			
+
 	}
+	cout << counter << endl;
 }

@@ -9,8 +9,6 @@ int main(){
 	string input; cin >> input;
 	string answer = "";
 
-	// int n0 = 3 - input.size() % 3;
-
 	while (input.size() % 3 != 0){
 		input.insert(0, "0");
 	}

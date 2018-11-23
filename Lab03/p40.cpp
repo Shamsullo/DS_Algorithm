@@ -41,7 +41,7 @@ int main(){
 
 vector<string> split(const string& s, char delimiter){
 
-   vector<std::string> tokens;
+   vector<string> tokens;
    string token;
    istringstream tokenStream(s);
 
@@ -55,7 +55,6 @@ vector<string> split(const string& s, char delimiter){
 string lastSyllable(vector<string> ss){
 
 	string s = ss[ss.size() - 1];
-
 	for (int i = s.size() - 1; i >= 0; --i)	{	
 		char c = s.at(i);
 		if (c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u'){
