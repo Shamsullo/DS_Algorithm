@@ -21,14 +21,14 @@ double factorial(double n){
 
 int main(){
  
-        double n; cin >> n;
+    double n; cin >> n;
 
-        double answer = 0;
-        if(n > 3){
-            answer = ((factorial(n) / (factorial(n - 4) * factorial(4))) / n) * 4;
-            cout << fixed << setprecision(0) << answer << "\n";
-        }else{
-            cout << fixed << setprecision(0) << answer << "\n";
-        }
-        return 0;
+    double answer = 0;
+    if(n > 3){
+        answer = ((factorial(n) / (factorial(n - 4) * factorial(4))) / n) * 4;
+        cout << fixed << setprecision(0) << answer << "\n";
+    }else{
+         cout << fixed << setprecision(0) << answer << "\n";
     }
+    return 0;
+}

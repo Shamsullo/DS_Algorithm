@@ -115,5 +115,4 @@ int main(int argc, char *argv[]){
     cout << "My guess was " << compNumber << endl;
     cout << "You gueed it in " << moves << (moves == 1 ? " moves." : " move.");
 
-    // cout << "\nPress any key to quit the game...";
 }   
