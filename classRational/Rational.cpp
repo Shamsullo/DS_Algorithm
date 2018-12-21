@@ -79,7 +79,6 @@ istream& operator>>(istream& inp, Rational& r)
     }
     
     r = Rational(num, den);
-    
     return inp;
 }
     

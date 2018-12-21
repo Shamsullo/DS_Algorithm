@@ -14,6 +14,7 @@ TEST_CASE("Check Rational's constructors", "[ctors]")
     
     SECTION("Constructor wih no parameters")
     {
+
         sout << Rational();
         REQUIRE(sout.str() == "0/1");
     }
@@ -197,4 +198,5 @@ TEST_CASE("Check >> operator", "[input]")
             REQUIRE_FALSE(succ); 
         }
     }
+
 }
