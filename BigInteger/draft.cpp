@@ -1,39 +1,65 @@
 #include <iostream>
-#include <vector>
-#include "BigInt.h"
 
 using namespace std;
 
-// bool vc(vector<int> a, vector<int> b){
-// 	//if (a.getSign() == b.getSign()){
-// 		if (a.size() == b.size()){
-// 			return equal(a.begin(), a.end(), b.begin());	
-// 			// for (int i = 0; i < a.getNum().size(); ++i){
-// 			// 	a.getNum()[i] != b.getNum()[i];
-// 			// 	return false;
-// 			// }	
-// 		}
+struct Node{
+	
+	int data;
+	Node* prev;
+	Node* next;
 
-// 	//}
-// 	return false;
-// }
+	Node (int aData, Node* aPrev, Node* aNext)
+	:data(aData), prev(aPrev), next(aNext){	
+	}
+
+};
+
+void pushBack(Node*& head, Node*& tail, int element);
+void printInDirectOrder(Node* head);
+void printInReversedOrder(Node* tail);
+
 int main(){
 
-	// int r = 34;
-	BigInt a ("2340");
+	Node* head;
+	Node* tail;
 
-	BigInt b("10");
 	
+	int a; cin >> a;
+	
+	while(cin >> a){
+		pushBack(head, tail, a);
+	}
 
-	cout << b++ << b + a-- << endl;
-	cout << a-- << endl;
+	printInDirectOrder(head);
+	printInReversedOrder(tail);
+
+	return 0;
+}
+
+void pushBack(Node*& head, Node*& tail, int element){
+
+	if (head == nullptr){
+		head = tail = new Node(element, nullptr, nullptr);
+
+	}else{
+		tail->next = new Node(element, tail, nullptr);
+		tail = tail->next;
+	}
+
+}
+
+void printInDirectOrder(Node* head){
+
+	for (Node* p = head; p; p = p->next){
+		cout << p->data << " ";
+	}
 	cout << endl;
+}
 
-	// int c = 1;
-	// int d = 2;
-	// cout << c++ + d << endl;
+void printInReversedOrder(Node* tail){
 
-	// cout << --a << endl;
-
-
+	for(Node* p = tail; p; p = p->prev){
+		cout << p->data << " ";
+	}
+	cout << endl;
 }
