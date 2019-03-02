@@ -4,40 +4,42 @@
 #include <cctype>
 
 using namespace std;
-
 	// Andy's first dictionary
 
 int main(){
 
 	set<string> d;
+	
+	string line; 
+	
 
-	string str;
+	while (getline(cin, line)){
 
-	while (true){
-		
-		cin >> str;
+		string result = ""; 
 
-		// for(int i = 0; i < str.size(); ++i){
-		// 	if(isupper(str[i])){
-		// 		str[i] = tolower(str[i]);
-		// 	}else if(!isalpha(str[i])){
-		// 		str.erase(str.begin()+ i);
-		// 	}
-		// }
+		for (int i = 0; i < line.size(); ++i){	
+			
+			char ch = line[i];
 
-		// d.insert(str);
+			if (isalpha(ch)){
+				ch = tolower(ch);
+				result += ch;
+				if (i == line.size() -1){
+					d.insert(result);
+				}	
+			}else{
+				d.insert(result);
+				result = "";
+			}
+		}
 
+	}			
+	
+	for(auto s: d){	
+		if(!s.empty()){
+			cout << s << endl;
+		}
 	}
 
-	for(auto s: d){
-		cout << s << endl;
-	}
-
-	// string a = "sTring";
-	// a[1] = 't';
-	// string b = "string.";
-	// b.erase(b.begin() + 6 );
-	// cout << a << endl;
-	// cout << b;
 	return 0;
 }
