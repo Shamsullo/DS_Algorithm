@@ -10,9 +10,7 @@ using namespace std;
 int main(){
 
 	set<string> d;
-	
 	string line; 
-	
 	string result = ""; 
 
 	while (getline(cin, line)){
@@ -23,10 +21,9 @@ int main(){
 			result.erase(result.end() - 1);
 		} 
 
-		for (int i = 0; i < line.size(); ++i){	
-			
+		for (int i = 0; i < line.size(); ++i){		
 			char ch = line[i];
-
+			
 			if (isalpha(ch) or ch == '-'){
 				ch = tolower(ch);
 				result += ch;
@@ -38,7 +35,6 @@ int main(){
 				result = "";
 			}
 		}
-
 	}			
 	
 	for(auto s: d){	
