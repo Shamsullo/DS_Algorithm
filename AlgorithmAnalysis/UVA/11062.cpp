@@ -4,7 +4,6 @@
 #include <cctype>
 
 using namespace std;
-
 	// Andy's second dictionary
 
 int main(){
