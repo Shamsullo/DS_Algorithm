@@ -6,11 +6,20 @@
 
 using namespace std;
 
+size_t badHF(const string& str){
+	return 42;
+}
+
 int main(){
 
-	unordered_set<string> s;
+	// typedef size_t (*HF)(const string&);
+	// unordered_set<string, HF> s(2, badHF);
+	
 
+	unordered_set<string> s;
 	auto hf = s.hash_function();
+
+	// auto hf = badHF(string str);
 	string line;
 
 	while(getline(cin, line)){
