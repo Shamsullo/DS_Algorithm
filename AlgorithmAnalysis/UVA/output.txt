@@ -1,5 +1,3 @@
-2
-3
-10
-6
-4
+1: ko te kader molla -- ko te kader molla
+2: jalo re jalo -- jalo re jalo
+3:  -- 
