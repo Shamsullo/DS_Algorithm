@@ -10,27 +10,22 @@ int main(){
 	int n; cin >> n;
 	unordered_map<string, string> slogans;
 
+	string first; getline(cin, first);
+	
 	for (int i = 1; i <= n; ++i){
 		
-		string first; getline(cin, first);
 		getline(cin, first);
-		cout << i << ": " << first; 
-		string second; getline(cin, second);
-		getline(cin, second);
-		cout << " -- "<< first << endl;
 
-		slogans[first] = second;
+		getline(cin, slogans[first]);
 	}
-	// for(auto& a: slogans){
-	// 	cout << a.first << " -- " << a.second << endl;
-	// }
 
-	// int test; cin >> test;
-	// for (int i = 0; i < test; ++i) {
-	// 	string first; getline(cin, first);
+	int test; cin >> test;
+	getline(cin, first);
+	for (int i = 0; i < test; ++i) {
+		getline(cin, first);
 
-	// 	cout << slogans[first] << endl;;
-	// }
+		cout << slogans[first] << endl;
+	}
 
 
 }

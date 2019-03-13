@@ -1,48 +1,31 @@
-#include <iostream>
+#include <stdio.h>
 #include <map>
 using namespace std;
 
-int main(void) {
-    int cases, n;
-    int snowflake;
-    int *snowflakes = new int[1000001];
-    int first, current, result, counter;
+map<int, int> last;
 
-    cin >> cases;
+int main() {
 
-    while (cases--) {
-        first = current = result = counter = 0;
-        map<int,bool> taken;
-
-        cin >> n;
-
-        while (n--) {
-            cin >> snowflake;
-            snowflakes[current++] = snowflake;
-
-            if (taken.find(snowflake) != taken.end()) {
-                if (counter > result) result = counter;
-
-                while (true) {
-                    if (snowflakes[first] == snowflake) break;
-                    taken.erase(snowflakes[first]);
-                    counter--;
-                    first++;
-                }
-                
-                first++;
-            } else {
-                counter++;
-                taken[snowflake] = true;
+    int t;
+    for (scanf("%d", &t); t; t--) {
+        int n;
+        scanf("%d", &n);
+        int start = 1, sol = 0;
+        last.clear();
+        for (int i = 1; i <= n; i++) {
+            int a;
+            scanf("%d", &a);
+            if (last[a] >= start) {
+                if (i - start > sol)
+                   sol = i - start;
+                start = last[a] + 1;
             }
+            last[a] = i;
         }
-
-        if (counter > result) result = counter;
-        
-        cout << result << endl;
+        if (n + 1 - start > sol)
+            sol = n + 1 - start;
+        printf("%d\n", sol);
     }
-
-    delete snowflakes;
-
     return 0;
+
 }

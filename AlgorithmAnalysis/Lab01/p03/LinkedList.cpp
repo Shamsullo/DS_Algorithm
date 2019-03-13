@@ -4,6 +4,7 @@
 using namespace std;
 
 LinkedList::LinkedList(){
+	
 	head = new Node(0, nullptr, nullptr);
 	tail = new Node(0, nullptr, nullptr);
 	length = 0;

@@ -4,6 +4,7 @@
 #include <string>
 
 class LinkedList{
+	
 	private:
 	struct Node{
 		int data;

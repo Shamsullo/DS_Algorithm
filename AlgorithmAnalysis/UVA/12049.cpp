@@ -31,30 +31,39 @@ int main(){
 			}
 		}
 
+				// int  = 1;
 		for(auto& n: aMap){
 			auto f =  bMap.find(n.first);
 			if(f != bMap.end()){
-				int d = aMap[n.first] - bMap[n.first];
-				rCounter += (d < 0 ? (-1)* d : d);
+				int d = aMap[n.second] - bMap[n.second];
+				// cout << o << ": " << d << endl; 
+				if(d < 0){
+					rCounter += (-1) * d;
+				}else {
+					rCounter += d;
+				}
+				// rCounter += (d < 0 ? (-1)* d : d);
 			}else{
-				aMap.erase(n.first);
-				++rCounter;
+				// aMap[n.first] = 0;
+				// aMap.erase(n.f1);
+				rCounter += aMap[n.second];
 			}
+			// ++o;
 		}
 
 		cout << rCounter << endl;
 
-		cout << "aMap: ";
-		for(auto& a: aMap){
-			cout << a.first << " -- " << a.second << " ";
-		}
-		cout << endl;
+		// cout << "aMap: ";
+		// for(auto& a: aMap){
+		// 	cout << a.first << " -- " << a.second << " ";
+		// }
+		// cout << endl;
 
-		cout << "bMap: ";
-		for(auto& b: bMap){
-			cout << b.first << " -- " << b.second << " ";
-		}
-		cout << endl;
+		// cout << "bMap: ";
+		// for(auto& b: bMap){
+		// 	cout << b.first << " -- " << b.second << " ";
+		// }
+		// cout << endl;
 	}
 
 	return 0;

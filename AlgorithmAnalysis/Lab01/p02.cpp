@@ -52,7 +52,7 @@ void printInDirectOrder(list<int> lst){
 
 void printInReversedOrder(list<int> lst){
 
-	for (auto it = lst.rbegin(); it != lst.rend(); ++it){
+	for (auto it = lst.end() - 1; it != lst.begin(); --it){
 		cout << *it << " ";
 	}
 	cout << endl;

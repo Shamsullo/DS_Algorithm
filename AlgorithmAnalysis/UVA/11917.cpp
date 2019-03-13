@@ -27,8 +27,9 @@ int main(){
 
 		cout << "Case " << i << ": ";
 
-		if(sub[sparrow] == 0){
-			cout << "Do your homework!" << endl;
+
+		if(sub.find(sparrow) == sub.end() or sub[sparrow] > (sparrowTime + 5)){
+			cout << "Do your own homework!" << endl;
 		}else if(sub[sparrow] <= sparrowTime){
 			cout << "Yesss" << endl;
 		}else if (sub[sparrow] <= (sparrowTime + 5)){
