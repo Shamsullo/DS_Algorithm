@@ -1,5 +1,6 @@
 # DataStructures
 
+computyer system in a programer prospective: Chapter(3) 3.7 - 3. 6 3.13(the diffference between 32 and 64 bit OP)  
 
 #Computer Architecture
 
