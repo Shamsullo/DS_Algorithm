@@ -35,7 +35,7 @@ bool BSTree::insert(int k){
 		prev->left = t;
 	}else{
 		prev->right = t;
-	}
+	}sw
 
 	++counter;
 	return true;
@@ -137,7 +137,7 @@ void BSTree::eraseNodeWithTwoChild(Node* cur){
 
 void BSTree::print(ostream& out){
 
-	out << "{ "
+	out << "{ ";
 
 	std::vector<pair<Node*, int> stk;
 
@@ -161,7 +161,7 @@ void BSTree::print(ostream& out){
 		}
 	}
 
-	out << "}"
+	out << "}";
 }
 
 void BSTree::clear(){
@@ -183,7 +183,6 @@ void BSTree::clear(){
 			++r.second;
 			stk.emplace_back(r.first->right, 0);
 		}else if(r.second == 2){
-			
 			++r.first;	
 			delete r.first;
 			--counter;

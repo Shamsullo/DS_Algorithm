@@ -72,7 +72,14 @@ void Map::printInOrer(){
         }else if(r.cour  = 0)
             {
                 r.cout++;
-                stk.push()
+                stk.push(r.node->left, 0)
+            }
+            else if(r.cout == 1){
+                ++rcout;
+                print
+            }else if(r.cout == 2){
+                ++ r.cout;
+                stk.push(r.node->right, 0)
             }
 
     }
