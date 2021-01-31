@@ -1,5 +1,0 @@
-Kodir 37 49 28
-Hobil 78 23 43
-
-John 67 88 23
-Harry 78 23 89

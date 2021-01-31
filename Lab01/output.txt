@@ -1,5 +1,0 @@
-Kodir: 38
-Hobil: 48
-
-John: 59
-Harry: 63
